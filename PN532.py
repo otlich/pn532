@@ -67,7 +67,6 @@ def wait_card(i2c,addr):
 				l = int(result[36:38],0)
 				nl = 38+l+l/2
 				card_num = int(result[39:int(nl)].replace(' ','').strip(),16)
-				return card_num+22071987
 			time.sleep(0.2)
 	else:
 		return False
